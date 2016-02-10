@@ -91,7 +91,7 @@ class TaggedMetrics extends events.EventEmitter {
     });
   }
 
-  approximate(prefix, tags = null, interval = 10 * 60 * 1000) {
+  estimate(prefix, tags = null, interval = 10 * 60 * 1000) {
     check(typeof(prefix) === 'string', 'prefix must be a string');
     prefix = _.trim(prefix, SEPARATOR);
     check(prefix.length > 0, 'prefix must be longer than zero characters');
